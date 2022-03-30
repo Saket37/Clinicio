@@ -9,3 +9,8 @@ To know more about the Clinicio Android App, head over to the [README](/android-
 
 To know more about the Clinicio Back-end, head over to the [README](/backend/README.md)
 
+# Project Video
+
+
+https://user-images.githubusercontent.com/66915273/160892708-ca2f1d13-95df-4bde-9a4a-c323b4370e6e.mp4
+
