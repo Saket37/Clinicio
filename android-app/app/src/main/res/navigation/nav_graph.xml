@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginAsFragment">
+
+    <fragment
+        android:id="@+id/loginAsFragment"
+        android:name="com.example.clinicio.fragment.loginas.LoginAsFragment"
+        android:label="fragment_login_as"
+        tools:layout="@layout/fragment_login_as">
+        <action
+            android:id="@+id/action_loginAsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginAsFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+        <action
+            android:id="@+id/action_loginAsFragment_to_patientHomeFragment"
+            app:destination="@id/patientHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.clinicio.fragment.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_patientHomeFragment"
+            app:destination="@id/patientHomeFragment" />
+        <argument
+            android:name="role"
+            app:argType="com.example.clinicio.data.remote.user.entity.Role" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.clinicio.fragment.signup.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+        <argument
+            android:name="role"
+            app:argType="com.example.clinicio.data.remote.user.entity.Role" />
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorHomeFragment"
+        android:name="com.example.clinicio.fragment.doctor.DoctorHomeFragment"
+        android:label="fragment_doctor_home"
+        tools:layout="@layout/fragment_doctor_home">
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_doctorInfoFragment"
+            app:destination="@id/doctorInfoFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_addSlotsFragment"
+            app:destination="@id/addSlotsFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_loginAsFragment"
+            app:destination="@id/loginAsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientHomeFragment"
+        android:name="com.example.clinicio.fragment.patient.PatientHomeFragment"
+        android:label="fragment_patient_home"
+        tools:layout="@layout/fragment_patient_home">
+        <action
+            android:id="@+id/action_patientHomeFragment_to_patientInfoFragment"
+            app:destination="@id/patientInfoFragment" />
+        <action
+            android:id="@+id/action_patientHomeFragment_to_bookAppointmentFragment"
+            app:destination="@id/doctorListFragment" />
+        <action
+            android:id="@+id/action_patientHomeFragment_to_loginAsFragment"
+            app:destination="@id/loginAsFragment" />
+        <action
+            android:id="@+id/action_patientHomeFragment_to_appointmentHistoryFragment"
+            app:destination="@id/appointmentHistoryFragment" />
+        <action
+            android:id="@+id/action_patientHomeFragment_to_upcomingAppointmentFragment"
+            app:destination="@id/upcomingAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorInfoFragment"
+        android:name="com.example.clinicio.fragment.doctor.info.DoctorInfoFragment"
+        android:label="fragment_info_doctor"
+        tools:layout="@layout/fragment_info_doctor">
+        <action
+            android:id="@+id/action_doctorInfoFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.clinicio.fragment.doctor.appointment.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment">
+        <action
+            android:id="@+id/action_appointmentFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSlotsFragment"
+        android:name="com.example.clinicio.fragment.doctor.slots.AddSlotsFragment"
+        android:label="fragment_add_slots"
+        tools:layout="@layout/fragment_add_slots">
+        <action
+            android:id="@+id/action_addSlotsFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+        <action
+            android:id="@+id/action_addSlotsFragment_to_doctorInfoFragment"
+            app:destination="@id/doctorInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientInfoFragment"
+        android:name="com.example.clinicio.fragment.patient.info.PatientInfoFragment"
+        android:label="fragment_patient_info"
+        tools:layout="@layout/fragment_patient_info">
+        <action
+            android:id="@+id/action_patientInfoFragment_to_patientHomeFragment"
+            app:destination="@id/patientHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorListFragment"
+        android:name="com.example.clinicio.fragment.patient.appointment.DoctorListFragment"
+        android:label="fragment_doctor_list"
+        tools:layout="@layout/fragment_doctor_list">
+        <action
+            android:id="@+id/action_bookAppointmentFragment_to_patientHomeFragment"
+            app:destination="@id/patientHomeFragment" />
+        <action
+            android:id="@+id/action_doctorListFragment_to_appointmentSlotFragment"
+            app:destination="@id/appointmentSlotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentSlotFragment"
+        android:name="com.example.clinicio.fragment.patient.appointment.slots.AppointmentSlotFragment"
+        android:label="AppointmentSlotFragment"
+        tools:layout="@layout/fragment_appointment_slot">
+        <argument
+            android:name="doctorID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_appointmentSlotFragment_to_doctorListFragment"
+            app:destination="@id/doctorListFragment" />
+        <action
+            android:id="@+id/action_appointmentSlotFragment_to_bookAppointmentFragment"
+            app:destination="@id/bookAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookAppointmentFragment"
+        android:name="com.example.clinicio.fragment.patient.appointment.slots.book.BookAppointmentFragment"
+        android:label="fragment_book_appointment"
+        tools:layout="@layout/fragment_book_appointment">
+        <action
+            android:id="@+id/action_bookAppointmentFragment_to_appointmentSlotFragment"
+            app:destination="@id/appointmentSlotFragment" />
+        <argument
+            android:name="slotID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_bookAppointmentFragment_to_patientHomeFragment2"
+            app:destination="@id/patientHomeFragment" />
+        <action
+            android:id="@+id/action_bookAppointmentFragment_to_patientInfoFragment"
+            app:destination="@id/patientInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentHistoryFragment"
+        android:name="com.example.clinicio.fragment.patient.appointmentHistory.AppointmentHistoryFragment"
+        android:label="fragment_appointment_history"
+        tools:layout="@layout/fragment_appointment_history">
+        <action
+            android:id="@+id/action_appointmentHistoryFragment_to_patientHomeFragment"
+            app:destination="@id/patientHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingAppointmentFragment"
+        android:name="com.example.clinicio.fragment.patient.upcomingAppointment.UpcomingAppointmentFragment"
+        android:label="fragment_upcoming_appointment"
+        tools:layout="@layout/fragment_upcoming_appointment">
+        <action
+            android:id="@+id/action_upcomingAppointmentFragment_to_patientHomeFragment"
+            app:destination="@id/patientHomeFragment" />
+    </fragment>
+
+</navigation>

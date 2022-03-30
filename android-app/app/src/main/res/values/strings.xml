@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Clinicio</string>
+    <string name="continue_as_doctor">Continue as Doctor</string>
+    <string name="continue_as_patient">Continue as Patient</string>
+
+
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="confirm_password_text">Confirm Password</string>
+    <string name="log_in">Log In</string>
+    <string name="extra_login_string">or connect with</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="person_name"><![CDATA[First & Last Name]]></string>
+    <string name="don_t_have_an_account">Don\'t have an account</string>
+    <string name="register_here"><u>Register Here</u></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="doctor_login">Doctor Login</string>
+    <string name="patient_login">Patient Login</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="address">Address</string>
+
+    <string name="token">Token</string>
+
+</resources>
